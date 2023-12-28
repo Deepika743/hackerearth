@@ -1,0 +1,18 @@
+def merge_the_tools(s, k):
+    n = len(s)
+
+    for i in range(0, n, k):
+        substring = s[i:i+k]
+        unique_chars = ""
+
+        for char in substring:
+            if char not in unique_chars:
+                unique_chars += char
+
+        print(unique_chars)
+
+# Example usage:
+if __name__ == "__main__":
+    s = input().strip()
+    k = int(input().strip())
+    merge_the_tools(s, k)
